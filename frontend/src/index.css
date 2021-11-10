@@ -213,3 +213,7 @@ img.large{
   opacity: 0.8;
   text-align: center;
 }
+
+.dja{
+  background-attachment: fixed;
+}
