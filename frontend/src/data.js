@@ -27,9 +27,9 @@ const data = {
     }, 
     {
         _id: '3',
-        name: 'Dolce and Gabbana Trouser',
+        name: 'Dolce and Gabbana Trouserss',
         category: 'Trouser',
-        image: '/images/product-3.jpg',
+        image: '/images/product-1.jpg',
         price: 120,
         countInStock:0,
         brand: 'Dolce and Gabbana',
@@ -66,6 +66,19 @@ const data = {
     }, 
     {
         _id: '6',
+        name: 'Nike Trouser',
+        category: 'Trouser',
+        image: '/images/product-6.jpg',
+        price: 0,
+        countInStock:15,
+        brand: 'Dolce and Gabbana',
+        rating: 4.5,
+        numReviews: 15,
+        description:'100% Cotton'
+
+    }, 
+    {
+        _id: '7',
         name: 'Nike Trouser',
         category: 'Trouser',
         image: '/images/product-6.jpg',

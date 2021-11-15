@@ -5,6 +5,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productActions';
+import Fade from 'react-reveal/Fade'
 
 export default function HomeScreen() {
     const dispatch = useDispatch();
@@ -15,6 +16,7 @@ export default function HomeScreen() {
         dispatch(listProducts());
     }, []);
     return (
+       
         <div>
             {loading?(
                 <div className="loading-spin"> 
@@ -24,14 +26,20 @@ export default function HomeScreen() {
             ): error? ( 
             <MessageBox variant="danger">{error}</MessageBox>
             ) : (
+                //<Fade bottom duration={1500} cascade> 
             <div className="row center"> 
           {products.map((product) => (
+
               <Product key={product._id} product={product}></Product>
               
           ))}
          </div>
+         //</Fade>
+        
             )}
           
          </div>
+         
     );
+    
 }

@@ -72,39 +72,106 @@ li{
   margin-top: 1rem;
 }
 
-button{
+input,
+select,
+textarea{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.2rem #F27A1A solid;
+  font-size: 1.6rem;
+  color: #000000;
+  letter-spacing: 0.1em;
+  font-family: Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+}
+
+input:hover,
+select:hover,
+textarea:hover{
+  border: 0.2rem #ff9741 solid;
+}
+
+.primary ,.block{
   transition: all .3s ease-in-out;
   padding: 1rem;
   border-radius: 0.5rem;
   border: 0.1rem #F27A1A solid;
   font-size: 1.6rem;
-  background: #F27A1A;
   color: #ffffff;
   letter-spacing: 0.1em;
   font-family: Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+  background: #F27A1A;
+  cursor: pointer;
 }
 
-button:hover{
-  background: #f78d36;
+.primary:hover, .block:hover{
+  background: #f58a33;
 }
 
-button.block{
+.disabled-button:hover{
+  background-color: #ff9a47;
+}
+
+
+.disabled-button{
+  background-color: #ff9a47;
+  cursor: auto;
+}
+
+.primary ,.block,.block{
   width: 100%;
 }
 /* Header */
 
 header a{
-  color: #333333;
+  color: #ffffff;
+  padding: 0 0.9rem 0.2rem 0.9rem;
+  display: inline-block;
+  position: relative;
 }
+
+header a:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    font-weight: bold;
+}
+
+header a:hover{
+  font-weight: bold;
+}
+
+header a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
 
 a.brand{
   color: #ffffff;
   font-size: 3rem;
   font-weight: bold;
   font-family: 'Lobster', cursive;
+}
+
+.badge{
+  background-color: #ffffff;
+  color: #F27A1A;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4;
+  margin-left: 0.3rem;
 }
 
 .row{
@@ -122,15 +189,24 @@ a.brand{
   justify-content: center;
 }
 .col-1{
-  flex: 1 1 25rem
+  flex: 1 1 25rem;
 }
 
 .col-2{
-  flex: 2 1 50rem
+  flex: 2 1 50rem;
+}
+
+.min-30{
+  min-width: 30rem;
 }
 /* Image */
 img{
   border-radius: 0.5rem;
+}
+
+img.small{
+  max-width: 5rem;
+  width: 100%;
 }
 
 img.medium{
@@ -150,6 +226,7 @@ img.large{
   background-color: #f8f8f8;
   border-radius: 0.5rem;
   margin: 1rem; 
+  height: 60rem;
 }
 
 .card-body{
@@ -171,6 +248,15 @@ img.large{
   font-size: 2rem;
   color: #F27A1A;
 }
+
+.checkout-body{
+  border: 0.2rem #F27A1A solid;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-left: 2rem;
+
+}
+
 
 /* Rating */
 
@@ -199,8 +285,13 @@ img.large{
 }
 
 .alert-info{
-  color: #2020a0;
-  background-color: #e0e0ff;
+  color: #ffffff;
+  background-color: #f58a33;
+}
+
+.alert-info a{
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 .alert-danger{
@@ -212,4 +303,8 @@ img.large{
   color: #F27A1A;
   opacity: 0.8;
   text-align: center;
+}
+
+.bold-size{
+  font-weight: bold;
 }
