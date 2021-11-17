@@ -199,6 +199,15 @@ a.brand{
 .min-30{
   min-width: 30rem;
 }
+
+.min-30 a{
+  color: #000000;
+}
+
+
+.min-30 a:hover{
+  color: #F27A1A;
+}
 /* Image */
 img{
   border-radius: 0.5rem;
@@ -307,4 +316,54 @@ img.large{
 
 .bold-size{
   font-weight: bold;
+}
+
+/* Form */
+
+.form{
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.form > div{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.form label{
+  margin: 1rem 0 ;
+  display: block;
+}
+
+form a{
+  color: #000000;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.form a:hover{
+  color: #F27A1A;
+}
+
+/* Dropdown */
+.dropdown{
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content{
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: #F27A1A;
+  margin: 0;
+  border-radius: 0.5rem;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
 }

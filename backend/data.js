@@ -1,6 +1,23 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+
+    users: [
+        {
+            name: 'Chasan',
+            email: 'admin@example.com',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: true,
+        },
+
+        {
+            name: 'John',
+            email: 'user@example.com',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: false,
+        },
+    ],
     products: [{
-        _id: '1',
         name: 'Dolce and Gabbana Trouser',
         category: 'Trouser',
         image: '/images/product-1.jpg',
@@ -13,8 +30,7 @@ const data = {
 
     }, 
     {
-        _id: '2',
-        name: 'Dolce and Gabbana Trouser',
+        name: 'Dolce and Gabbana Shirt',
         category: 'Trouser',
         image: '/images/product-2.jpg',
         price: 120,
@@ -26,8 +42,7 @@ const data = {
 
     }, 
     {
-        _id: '3',
-        name: 'Dolce and Gabbana Trouser',
+        name: 'Adidas Trouser',
         category: 'Trouser',
         image: '/images/product-1.jpg',
         price: 120,
@@ -39,7 +54,6 @@ const data = {
 
     }, 
     {
-        _id: '4',
         name: 'Nike Trouser',
         category: 'Trouser',
         image: '/images/product-4.jpg',
@@ -52,7 +66,6 @@ const data = {
 
     }, 
     {
-        _id: '5',
         name: 'Trussardi Trouser',
         category: 'Shirt',
         image: '/images/product-5.jpg',
@@ -65,8 +78,7 @@ const data = {
 
     }, 
     {
-        _id: '6',
-        name: 'Nike Trouser',
+        name: 'Nike Shirt',
         category: 'Trouser',
         image: '/images/product-6.jpg',
         price: 0,
