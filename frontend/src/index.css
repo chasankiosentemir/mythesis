@@ -238,6 +238,13 @@ img.large{
   height: 60rem;
 }
 
+.payment-card{
+  border: 0.1rem  #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem; 
+}
+
 .card-body{
   padding: 1rem;
 }
@@ -333,7 +340,6 @@ img.large{
 
 .form label{
   margin: 1rem 0 ;
-  display: block;
 }
 
 form a{
@@ -366,4 +372,19 @@ form a{
 
 .dropdown:hover .dropdown-content{
   display: block;
+}
+
+/* Checkout Steps */
+
+.checkout-steps > div{
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.checkout-steps > div.active{
+  border-top-color: #F27A1A;
+  color: #F27A1A;
 }
