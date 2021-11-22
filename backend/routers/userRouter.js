@@ -8,7 +8,7 @@ import { generateToken } from '../utils.js';
 const userRouter = express.Router();
 
 userRouter.get('/seed',expressAsyncHandler(async (req,res) => {
-    await User.remove({});
+    //await User.remove({});
     const createdUsers = await User.insertMany(data.users);
     res.send({createdUsers});
 }));
@@ -42,7 +42,7 @@ userRouter.post('/register', expressAsyncHandler(async (req,res) =>{
 
     const createdUser = await user.save();
     res.send({
-        _id: createdUser.id,
+        _id: createdUser._id,
         name: createdUser.name,
         email: createdUser.email,
         isAdmin: createdUser.isAdmin,
