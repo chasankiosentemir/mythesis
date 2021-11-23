@@ -108,7 +108,22 @@ textarea:hover{
   cursor: pointer;
 }
 
-.primary:hover, .block:hover{
+.medium-button{
+  transition: all .3s ease-in-out;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #F27A1A solid;
+  font-size: 1.6rem;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+  font-family: Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #F27A1A;
+  cursor: pointer;
+}
+
+.primary:hover, .block:hover,.medium-button:hover{
   background: #f58a33;
 }
 
@@ -122,8 +137,16 @@ textarea:hover{
   cursor: auto;
 }
 
-.primary ,.block,.block{
+
+
+.primary ,.block{
   width: 100%;
+}
+
+button.small {
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 /* Header */
 
@@ -367,7 +390,7 @@ form a{
   position: absolute;
   display: none;
   right: 0;
-  min-width: 12rem;
+  min-width: 15rem;
   padding: 1rem;
   z-index: 1;
   background-color: #F27A1A;
@@ -392,4 +415,24 @@ form a{
 .checkout-steps > div.active{
   border-top-color: #F27A1A;
   color: #F27A1A;
+}
+
+/* Table */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table tbody tr:nth-of-type(odd) {
+  background-color: #ffa861;
+}
+.table td,
+.table th {
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 1rem;
+}
+.table button {
+  margin: 0 0.2rem;
+  padding: 0.5rem;
 }

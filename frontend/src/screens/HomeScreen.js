@@ -26,7 +26,6 @@ export default function HomeScreen() {
             ): error? ( 
             <MessageBox variant="danger">{error}</MessageBox>
             ) : (
-                //<Fade bottom duration={1500} cascade> 
             <div className="row center"> 
           {products.map((product) => (
 
@@ -34,7 +33,6 @@ export default function HomeScreen() {
               
           ))}
          </div>
-         //</Fade>
         
             )}
           
